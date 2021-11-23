@@ -2,9 +2,9 @@ import Navbar from "./Navbar";
 
 function Header(){
     return (
-        <div>
+        <div className="header">
+            <h1>CloudSounds</h1>
             <Navbar/>
-            <h1>Header</h1>
         </div>
     )
 }

@@ -30,32 +30,34 @@ function CreateArtists(props) {
     };
 
     return (
-        <section>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    value={newForm.name}
-                    name="name"
-                    placeholder="name"
-                    onChange={handleChange}
-                /><br />
-                <input
-                    type="text"
-                    value={newForm.photo_url}
-                    name="photo_url"
-                    placeholder="photo_url"
-                    onChange={handleChange}
-                /><br />
-                <input
-                    type="text"
-                    value={newForm.nationality}
-                    name="nationality"
-                    placeholder="nationality"
-                    onChange={handleChange}
-                /><br />
-                <input type="submit" value="Create Artists" />
-            </form>
-        </section>
+        <div className='create-artist'>
+            <section>
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        value={newForm.name}
+                        name="name"
+                        placeholder="name"
+                        onChange={handleChange}
+                    /><br />
+                    <input
+                        type="text"
+                        value={newForm.photo_url}
+                        name="photo_url"
+                        placeholder="photo_url"
+                        onChange={handleChange}
+                    /><br />
+                    <input
+                        type="text"
+                        value={newForm.nationality}
+                        name="nationality"
+                        placeholder="nationality"
+                        onChange={handleChange}
+                    /><br />
+                    <input type="submit" value="Create Artists" />
+                </form>
+            </section>
+        </div>
     );
 }
 

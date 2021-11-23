@@ -58,7 +58,7 @@ const Main = () => {
 
     const updateArtist = async (artist, id) => {
         // make a PUT request to create artist
-        await fetch(URL + id, {
+        await fetch(`${URL}artists/` + id, {
             method: "PUT",
             headers: {
                 "Content-Type": "Application/json",

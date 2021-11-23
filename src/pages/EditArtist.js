@@ -34,7 +34,7 @@ function EditArtist(props) {
     }
 
     return (
-        <div className="Artist">
+        <div className="edit-artist">
             <button id="delete" onClick={removeArtist}>
                 DELETE
             </button>

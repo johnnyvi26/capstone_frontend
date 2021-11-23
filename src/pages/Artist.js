@@ -11,12 +11,12 @@ function Artist(props){
     const sounds = props.sounds.filter(sound=> sound.artist_id == id);
 
     return(
-        <div className="artist">
-            
+        <div className="artist-show">
+
             <h1>Artist</h1>
             <h2>{artist.name}</h2>
             <Link to={`/edit-artist/${id}`}>EDIT</Link><br/>
-            <img src={artist.image} alt={artist.name} />
+            <img src={artist.photo_url} alt={artist.name} />
             <h3>{artist.nationality}</h3>
             <h1>All Sounds by This Artist</h1>
             {sounds.map(sound =>(
