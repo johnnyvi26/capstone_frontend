@@ -7,8 +7,8 @@ import EditArtist from '../pages/EditArtist';
 import Home from '../pages/Home';
 
 const Main = () => {
-    const [artists, setArtists] = useState(null);
 
+    const [artists, setArtists] = useState(null);
     const [sounds, setSounds] = useState(null);
 
     // useEffect(() =>{
@@ -39,6 +39,8 @@ const Main = () => {
         const data = await response.json();
         setSounds(data);
     };
+
+    console.log(sounds)
 
     const createArtist = async (artist) => {
         // make post request to create game
@@ -86,7 +88,7 @@ const Main = () => {
         <div className='Main'>
             <Routes>
                 <Route path='/' element={<Home artists={artists} />} />
-                <Route path='/artists/:id' element={ <Artist artists={artists} /> } />
+                <Route path='/artists/:id' element={ <Artist artists={artists} sounds={sounds} /> } />
                 <Route path='/edit-artist/:id' element={<EditArtist artists={artists} updateArtist={updateArtist} deleteArtist={deleteArtist} />} />
                 <Route path='/create-artists' element={<CreateArtists artists={artists} createArtist={createArtist} />} />
             </Routes>
